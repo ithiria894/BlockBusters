@@ -33,7 +33,7 @@ import youtube from "./youtube.svg";
 import vimeo from "./vimeo.svg";
 import vector from "./VectorHIW.svg";
 import zgcmq from "./zgcmq.svg";
-import hero from "./hero.png";
+import hero from "./hero.jpeg";
 import nft_1 from "./nft_1.png";
 import getAble from "./getable.png";
 import nft_image_1 from "./nft-image-1.png";
@@ -58,6 +58,17 @@ import errorgif from "./error.gif";
 import transfer from "./transfer.gif";
 import transferEther from "./ethereTransfer.gif";
 import okx from "./okx.png";
+import pig from "./pig.jpg";
+import hammer from "./hammer.jpg";
+import cloth from "./cloth.jpg";
+import tate from "./tate.jpg";
+import JLL1 from "./JLL1.png";
+import Chandang1 from "./Chandang1.png";
+import image from "./image.png";
+import OKX1  from "./OKX1.png";
+import Alibaba1 from "./Alibaba1.png";
+import ust from "./ust.png";
+
 
 
 export default {
@@ -121,4 +132,15 @@ export default {
   transfer,
   transferEther,
   okx,
+  pig,
+  hammer,
+  cloth,
+  tate,
+  JLL1,
+  Chandang1,
+  image,
+  OKX1,
+  Alibaba1,
+  ust,
+  
 };

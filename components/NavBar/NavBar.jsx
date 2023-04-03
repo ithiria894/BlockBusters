@@ -80,12 +80,16 @@ const NavBar = () => {
       <div className={Style.navbar_container}>
         <div className={Style.navbar_container_left}>
           <div className={Style.logo}>
-            <Image
-              src={images.logo}
-              alt="BlockBusterMarketPlace"
-              width={150}
-              //   height={100}
-            />
+            <a href="/">  
+            {/* // logo link to home page  */}
+              <Image
+                src={images.logo}
+                alt="BlockBusterMarketPlace"
+                width={150}
+                href="/"
+                //   height={100}
+              />
+            </a>
           </div>
           <div className={Style.navbar_container_left_box_input}>
             <div className={Style.navbar_container_left_box_input_box}>
@@ -128,8 +132,8 @@ const NavBar = () => {
           </div>
 
           {/* CREATE BUTTON SECTION WHAT is THIS??? */}
-          <div className={Style.navbar_container_right_button}> 
-          <Button btnName="Connect" handleClick={() => connectWallet()} />
+          <div className={Style.navbar_container_right_button}>
+            <Button btnName="Connect" handleClick={() => connectWallet()} />
             {/* {currentAccount == "" ? ( // if currentAccount is empty then show the connect button
               <Button btnName="Connect" handleClick={() => connectWallet()} />
             ) : (

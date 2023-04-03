@@ -1,16 +1,17 @@
 import React, { useState, useEffect, useContext } from "react";
 import Image from "next/image";
 import { useRouter } from "next/router";
+import { BigNFTSilder } from "../componentsindex";
 
 //INTERNAL IMPORT
-import Style from "./HeroSection.module.css";
+import Style from "./HeroSection_slider.module.css";
 import { Button } from "../componentsindex";
 import images from "../../img";
 
 //SMART CONTRACT IMPORT
 // import { NFTMarketplaceContext } from "../../Context/NFTMarketplaceContext";
 
-const HeroSection = () => {
+const HeroSection_slider = () => {
   // const { titleData } = useContext(NFTMarketplaceContext);
   const router = useRouter();
   return (
@@ -29,10 +30,11 @@ const HeroSection = () => {
           />
         </div>
         <div className={Style.heroSection_box_right}>
+
           <Image
             src={images.hero2}
             alt="Hero section"
-            width={600}
+            // width={600}
             // height={600}
           />
         </div>
@@ -41,4 +43,4 @@ const HeroSection = () => {
   );
 };
 
-export default HeroSection;
+export default HeroSection_slider;

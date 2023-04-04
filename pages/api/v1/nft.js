@@ -6,14 +6,14 @@ export default async (req, res) => {
     const db = client.db("nft");
     const { itemName, game, network, token } = req.body;
 
-    const post = await db.collection("nft").insertOne({
+    const nft = await db.collection("nft").insertOne({
       itemName,
       game,
       network,
       token,
     });
 
-    res.json(post);
+    res.json(nft);
   } catch (e) {
     console.error(e);
     throw new Error(e).message;

@@ -1,7 +1,8 @@
 
 .heroSection{
     width: 80%;
-    margin: 3rem auto;
+    margin: 1rem auto;
+    
 }
 
 .heroSection_box{
@@ -16,12 +17,21 @@
 }
 
 .heroSection_box_left h1{
-    font-size: 4rem;
+    font-size: 5rem;
     line-height: 1;
 }
 
+.heroSection_box_left_h2{
+    font-size: 3rem;
+    line-height: 1;
+    /* color: peachpuff; */
+}
+
 .heroSection_box_left p{
-    margin-bottom:  2rem;
+    /* margin-bottom:  2rem; */
+    font-size: 2rem;
+    line-height: 1;
+    /* color: palegoldenrod; */
 }
 
 @media screen and (max-width: 35em) {

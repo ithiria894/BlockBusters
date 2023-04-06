@@ -10,22 +10,22 @@ const aboutus = () => {
   const founderArray = [
     {
       name: "Nicole Leung",
-      position: "Co-founder and Chief Executive",
+      position: "Co-founder",
       images: images.founder1,
     },
     {
       name: "Code9",
-      position: "Co-founder and Chief Executive",
+      position: "Co-founder",
       images: images.founder2,
     },
     {
       name: "Jake",
-      position: "Co-founder, Chairman",
+      position: "Co-founder",
       images: images.founder3,
     },
     {
       name: "Candy",
-      position: "Co-Founder, Chief Strategy Officer",
+      position: "Co-Founder",
       images: images.founder4,
     },
   ];

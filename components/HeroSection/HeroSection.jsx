@@ -17,27 +17,25 @@ const HeroSection = () => {
     <div className={Style.heroSection}>
       <div className={Style.heroSection_box}>
         <div className={Style.heroSection_box_left}>
-        <h1> Welcome to BlockBuster!</h1>
-          
-          <p>
-            Discover the most popular Game Assets in all kinds of Games. Creative
-            your item and sell them.
-          </p>
-          
+          <h1> Welcome to BlockBuster!</h1>
+
+          <div className={Style.heroSection_box_left_h2}>Online Game Assets Custody and Trading Platform
+          </div>
+          <p>Revolutionizing In Game Asset Trading with Web3 Technology</p>
+
           <Button
             btnName="Start your search"
             handleClick={() => router.push("/searchPage")}
           />
         </div>
         <div className={Style.heroSection_box_right}>
-          <Image 
-          className={Style.heroSection_box_right}
+          <Image
+            className={Style.heroSection_box_right}
             src={images.hero3}
             alt="Hero section"
             // width={600}
             // height={600}
             // border-radius="2rem"
-
           />
         </div>
       </div>

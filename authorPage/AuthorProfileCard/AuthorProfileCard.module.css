@@ -57,6 +57,11 @@
     width: 90%;
 }
 
+.AuthorProfileCard_box_info_userexp{
+    grid-template-columns: 1fr 1fr 1fr;
+    font-size: 1.5rem;
+}
+
 .AuthorProfileCard_box_info_social{
     display: flex;
     align-items: center;

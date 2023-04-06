@@ -12,7 +12,13 @@ import {
   TiSocialYoutube,
   TiSocialInstagram,
 } from "react-icons/ti";
+
+import { SiExpertsexchange } from "react-icons/si";
+import { GiChampions } from "react-icons/gi";
+import { TbBadges } from "react-icons/tb";
 import { BsThreeDots } from "react-icons/bs";
+import {GiAchievement,GiAchillesHeel} from "react-icons/gi"
+import {FaChild} from "react-icons/fa"
 
 //INTERNAL IMPORT
 import Style from "./AuthorProfileCard.module.css";
@@ -78,9 +84,24 @@ const AuthorProfileCard = ({ currentAccount }) => {
             />
           </div>
 
-          <p>
-            A UST STUDENT
-          </p>
+          <p>A UST STUDENT</p>
+          <div className={Style.AuthorProfileCard_box_info_userexp}>
+            <div>
+              <a>
+                Trading XP <SiExpertsexchange /> : 3{" "}
+              </a>
+            </div>
+            <div>
+              <a>
+                Achievements <GiChampions />: 2{" "}
+              </a>
+            </div>
+            <div>
+              <a>
+                Badges <TbBadges />: <GiAchievement /> <FaChild/> <GiAchillesHeel/>{" "}
+              </a>
+            </div>
+          </div>
 
           <div className={Style.AuthorProfileCard_box_info_social}>
             <a href="#">

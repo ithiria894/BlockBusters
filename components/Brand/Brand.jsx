@@ -26,7 +26,9 @@ const Brand = () => {
           />
           </a>
           <h1>We Are Block Busters</h1>
-          <p>A group of UST students that lead and inspire.</p>
+          <p>Revolutionize the gaming industry by unlocking new opportunities for game developers and players through 
+secure, transparent, decentralized platform that offers full ownership and control of digital assets. 
+</p>
 
           <div className={Style.Brand_box_left_btn}>
             <Button

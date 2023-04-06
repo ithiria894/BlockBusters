@@ -147,14 +147,14 @@ const NavBar = () => {
 
           {/* CREATE BUTTON SECTION */}
           <div className={Style.navbar_container_right_button}>
-            {currentAccount == "" ? (
+            {/* {currentAccount == "" ? (
               <Button btnName="Connect" handleClick={() => connectWallet()} />
-            ) : (
+            ) : ( */}
               <Button
                 btnName="Create"
                 handleClick={() => router.push("/uploadNFT")}
               />
-            )}
+            {/* )} */}
           </div>
 
           {/* CREATE BUTTON SECTION */}

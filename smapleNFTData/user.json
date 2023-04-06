@@ -1,6 +1,6 @@
 [
   {
-    "creatorName": "Dony Herrera",
+    "creatorName": "Nicole",
     "nftImage": "nft-image-1.png",
     "userImage": "user-1.png",
     "accountAddress": "0x829BD824B016326A401d083B33D092293333A830",
@@ -159,13 +159,13 @@
     ],
     "followers": [
       {
-        "name": "Jone Sina",
+        "name": "Code9",
         "userImage": "user-1.png",
         "description": " Cryptopunk Collector, hoarder of NFTs. Contributing to @ether_cards, an NFT Monetization Platform",
         "bool": true
       },
       {
-        "name": "Shoaib Sina",
+        "name": "Nicole Lueng",
         "userImage": "user-2.png",
         "description": "@ether_cards, an NFT Monetization Platform Cryptopunk Collector, hoarder of NFTs. Contributing to",
         "bool": true
@@ -173,19 +173,19 @@
     ],
     "following": [
       {
-        "name": "Shoaib Sina",
+        "name": "Candy",
         "userImage": "user-3.png",
         "description": " Cryptopunk Collector, hoarder of NFTs. Contributing to @ether_cards, an NFT Monetization Platform",
         "bool": true
       },
       {
-        "name": "Tim Sina",
+        "name": "Jake",
         "userImage": "user-5.png",
         "description": "@ether_cards, an NFT Monetization Platform Cryptopunk Collector, hoarder of NFTs. Contributing to",
         "bool": true
       },
       {
-        "name": "Jim Sina",
+        "name": "Jim",
         "userImage": "user-9.png",
         "description": "@ether_cards, an NFT Monetization Platform Cryptopunk Collector, hoarder of NFTs. Contributing to",
         "bool": true

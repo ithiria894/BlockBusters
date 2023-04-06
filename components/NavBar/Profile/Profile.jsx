@@ -9,7 +9,7 @@ import Link from "next/link";
 import Style from "./Profile.module.css";
 import images from "../../../img";
 
-const Profile = () => {
+const Profile = ({ currentAccount }) => {
   return (
     <div className={Style.profile}>
       <div className={Style.profile_account}>
@@ -22,8 +22,8 @@ const Profile = () => {
         />
 
         <div className={Style.profile_account_info}>
-          <p>name of user</p>
-          {/* <small>{currentAccount.slice(0, 18)}..</small> */}
+          <p>Nicole Leung</p>
+          <small>{currentAccount.slice(0, 18)}..</small>
         </div>
       </div>
 

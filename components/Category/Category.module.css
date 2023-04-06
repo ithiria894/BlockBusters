@@ -5,7 +5,7 @@
 }
 
 .category{
-    padding: 0rem 0;
+    padding: 4rem 0;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 1rem;
@@ -38,10 +38,6 @@
 .category_box_title span{
     font-size: 3rem;
     margin-top: 1rem;
-}
-
-.category_box_title_info{
-    width: 100%;
 }
 
 @media screen and (min-device-width: 320px) and (max-device-width: 425px) {

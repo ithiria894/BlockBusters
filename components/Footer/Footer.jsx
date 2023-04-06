@@ -35,7 +35,7 @@ const Footer = () => {
             
           </a>
           <p>
-            The world’s first and largest digital trading platform for Game Assets using blockchain technology. Buy, sell, and discover
+          The world’s first and largest digital trading platform for Game Assets using blockchain technology. Buy, sell, and discover
             exclusive digital items.
           </p>
 
@@ -77,7 +77,7 @@ const Footer = () => {
           </div>
           <div className={Style.subscribe_box_info}>
             <p>
-              Discover, collect, and sell extraordinary Game Assets in the
+            Discover, collect, and sell extraordinary Game Assets in the
               world first and largest blockchain trading platform.
             </p>
           </div>

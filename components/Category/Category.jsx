@@ -9,28 +9,28 @@ import images from "../../img";
 const Category = () => {
   const CategoryArray = [
     {
-      images: images.creatorbackground1,
-      name: "Axie Infinity",
+      images: images.game1,
+      name: "MineCraft",
     },
     {
-      images: images.creatorbackground2,
-      name: "Decentraland",
+      images: images.game2,
+      name: "MineCraft",
     },
     {
-      images: images.creatorbackground3,
-      name: "Alien Worlds",
+      images: images.game3,
+      name: "MineCraft",
     },
     {
-      images: images.creatorbackground4,
-      name: "The Sandbox",
+      images: images.game4,
+      name: "MineCraft",
     },
     {
-      images: images.creatorbackground5,
-      name: "Zed Run",
+      images: images.game5,
+      name: "MineCraft",
     },
     {
-      images: images.creatorbackground6,
-      name: "Minecraft",
+      images: images.game,
+      name: "MineCraft",
     },
 
   ];
@@ -43,8 +43,8 @@ const Category = () => {
               src={el.images}
               className={Style.category_box_img}
               alt="Background image"
-              width={350}
-              height={150}
+              width={400}
+              height={350}
               objectFit="cover"
             />
 
@@ -54,7 +54,7 @@ const Category = () => {
               </span> */}
               <div className={Style.category_box_title_info}>
                 <h4>{el.name}</h4>
-                <small>{i + 1}995 Game Assets </small>
+                <small>{i + 1}995 NFTS</small>
               </div>
             </div>
           </div>

@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 /* //THEME 1 */
+
 /* :root{
   --icons-color: #4c5773;
   --icons-light-color: #4c577341;
@@ -184,6 +185,25 @@
 
   --box-shadow-2:1px 1px 2px #5DDEE2,
   -1px -1px 2px #5DDEE2;
+
+} */
+/* #00aee1 */
+
+/* //THEME 9.5 */
+/* :root{
+  --icons-color: #00aee1;
+  --icons-light-color: #5DDEE257;
+  --icons-bg-color: #00aee1;
+  --shadow-dark-color: #373939;
+  --bg-shadow-dark-color: #373939;
+  --shadow-light-color: #1B181E;
+  --main-bg-color: #1B181E;
+
+  --box-shadow: 1px 1px 2px #00aee1,
+  -1px -1px 2px #00aee1;
+
+  --box-shadow-2:1px 1px 2px #00aee1,
+  -1px -1px 2px #00aee1;
 
 } */
 

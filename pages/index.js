@@ -1,30 +1,92 @@
-import React from "react"
-import Style from "../styles/index.module.css"
-import { Button, Footer, NavBar, HeroSection, HeroSection_slider, BigNFTSilder, Service, Title, Category ,Filter, NFTCard, Brand} from "../components/componentsindex"
+import React, { useState, useEffect, useContext } from "react";
 
+//INTERNAL IMPORT
+import Style from "../styles/index.module.css";
+import {
+  HeroSection,
+  Service,
+  BigNFTSilder,
+  Subscribe,
+  Title,
+  Category,
+  Filter,
+  NFTCard,
+  Collection,
+  AudioLive,
+  FollowerTab,
+  Slider,
+  Brand,
+  Video,
+  Loader,
+} from "../components/componentsindex";
+import { getTopCreators } from "../TopCreators/TopCreators";
 
+//IMPORTING CONTRCT DATA
+import { NFTMarketplaceContext } from "../Context/NFTMarketplaceContext";
 
 const Home = () => {
+  const { checkIfWalletConnected, currentAccount } = useContext(
+    NFTMarketplaceContext
+  );
+  useEffect(() => {
+    checkIfWalletConnected();
+  }, []);
+
+  const { fetchNFTs } = useContext(NFTMarketplaceContext);
+  const [nfts, setNfts] = useState([]);
+  const [nftsCopy, setNftsCopy] = useState([]);
+
+  // Commented out because it was causing an infinite loop
+  // useEffect(() => {
+  //   // if (currentAccount) {
+  //   fetchNFTs().then((items) => {
+  //     console.log(nfts);
+  //     setNfts(items.reverse());
+  //     setNftsCopy(items);
+  //   });
+  //   // }
+  // }, []);
+
+  //CREATOR LIST
+
+  const creators = getTopCreators(nfts);
+  // console.log(creators);
+
   return (
     <div className={Style.homePage}>
-      {/* <h1>Home</h1> */}
       <HeroSection />
-      {/* <HeroSection_slider /> */}
-      {/* <Service /> */}
-      {/* <Title
-        heading="Game Assets"
-        // paragraph="Discover the most popular game assets in all kinds of games."
-      /> */}
+      <Service />
       <BigNFTSilder />
+      {/* <Title
+        heading="Audio Collection"
+        paragraph="Discover the most outstanding NFTs in all topics of life."
+      /> */}
+      {/* <AudioLive />
+      {creators.length == 0 ? (
+        <Loader />
+      ) : (
+        <FollowerTab TopCreator={creators} />
+      )} */}
+
+      <Slider />
+      {/* <Collection /> */}
+      {/* <Title
+        heading="Featured NFTs"
+        paragraph="Discover the most outstanding NFTs in all topics of life."
+      />
+      <Filter />
+      {nfts.length == 0 ? <Loader /> : <NFTCard NFTData={nfts} />} */}
+
       <Title
-        heading="Category"
+        heading="Browse by Game Category"
+        paragraph="Explore the game assets in the most popular games."
       />
       <Category />
-      <Filter />
-      <NFTCard />
-      <Brand/>
-
+      <Subscribe />
+      <Brand />
+      {/* <Video /> */}
     </div>
-  )
-}
-export default Home
+  );
+};
+
+export default Home;

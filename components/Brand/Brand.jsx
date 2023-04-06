@@ -20,7 +20,7 @@ const Brand = () => {
             <Image
             src={images.ust}
             alt="logo"
-            width={50}
+            // width={50}
             // height={60}
             className={Style.Brand_box_left_logo}
           />

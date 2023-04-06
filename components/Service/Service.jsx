@@ -20,7 +20,7 @@ const Service = () => {
           </p>
           <h3>Filter & Discover</h3>
           <p>
-            Connect with wallet, discover, buy Game Assets, sell your Game Assets and earn
+            Connect with wallet, discover, buy NTFs, sell your NFTs and earn
             money
           </p>
         </div>
@@ -32,11 +32,11 @@ const Service = () => {
             height={100}
           />
           <p className={Style.service_box_item_step}>
-            <span>Step 2</span>
+            <span>Step 1</span>
           </p>
           <h3>Filter & Discover</h3>
           <p>
-          Connect with wallet, discover, buy Game Assets, sell your Game Assets and earn
+            Connect with wallet, discover, buy NTFs, sell your NFTs and earn
             money
           </p>
         </div>
@@ -48,11 +48,11 @@ const Service = () => {
             height={100}
           />
           <p className={Style.service_box_item_step}>
-            <span>Step 3</span>
+            <span>Step 1</span>
           </p>
           <h3>Connect Wallet</h3>
           <p>
-          Connect with wallet, discover, buy Game Assets, sell your Game Assets and earn
+            Connect with wallet, discover, buy NTFs, sell your NFTs and earn
             money
           </p>
         </div>
@@ -64,11 +64,11 @@ const Service = () => {
             height={100}
           />
           <p className={Style.service_box_item_step}>
-            <span>Step 4</span>
+            <span>Step 1</span>
           </p>
           <h3>Start trading</h3>
           <p>
-          Connect with wallet, discover, buy Game Assets, sell your Game Assets and earn
+            Connect with wallet, discover, buy NTFs, sell your NFTs and earn
             money
           </p>
         </div>

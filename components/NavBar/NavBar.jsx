@@ -1,36 +1,40 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import Image from "next/image";
-import Link from "next/link";
-//IMPORT ICONS
+import { DiJqueryLogo } from "react-icons/di";
+//----IMPORT ICON
 import { MdNotifications } from "react-icons/md";
 import { BsSearch } from "react-icons/bs";
 import { CgMenuLeft, CgMenuRight } from "react-icons/cg";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
-//INTERNAL IMPORTS
+//INTERNAL IMPORT
 import Style from "./NavBar.module.css";
 import { Discover, HelpCenter, Notification, Profile, SideBar } from "./index";
-import { Button } from "../componentsindex";
+import { Button, Error } from "../componentsindex";
 import images from "../../img";
-// import Navbar from "./NavBar.";
+
+//IMPORT FROM SMART CONTRACT
+import { NFTMarketplaceContext } from "../../Context/NFTMarketplaceContext";
 
 const NavBar = () => {
-  // -- USESTATE component
-
+  //----USESTATE COMPONNTS
   const [discover, setDiscover] = useState(false);
   const [help, setHelp] = useState(false);
   const [notification, setNotification] = useState(false);
   const [profile, setProfile] = useState(false);
   const [openSideMenu, setOpenSideMenu] = useState(false);
 
+  const router = useRouter();
+
   const openMenu = (e) => {
     const btnText = e.target.innerText;
     if (btnText == "Discover") {
-      //   setDiscover(true);
       setDiscover(!discover);
       setHelp(false);
       setNotification(false);
       setProfile(false);
-    } else if (btnText == "Help Center") {
+    } else if (btnText == "Help") {
       setDiscover(false);
       setHelp(!help);
       setNotification(false);
@@ -45,13 +49,11 @@ const NavBar = () => {
 
   const openNotification = () => {
     if (!notification) {
-      // if notification is false then set it to true
-      setNotification(true); //set other componets to false
+      setNotification(true);
       setDiscover(false);
       setHelp(false);
       setProfile(false);
     } else {
-      // if notification is true then set it to false
       setNotification(false);
     }
   };
@@ -75,36 +77,49 @@ const NavBar = () => {
     }
   };
 
+  const closeMenu = () => {
+    setDiscover(false);
+    setHelp(false);
+    setNotification(false);
+    setProfile(false);
+  };
+
+  //SMART CONTRACT SECTION
+  const { currentAccount, connectWallet, openError } = useContext(
+    NFTMarketplaceContext
+  );
+
   return (
-    <div classname={Style.navbar}>
+    <div className={Style.navbar}>
       <div className={Style.navbar_container}>
         <div className={Style.navbar_container_left}>
           <div className={Style.logo}>
-            <a href="/">  
-            {/* // logo link to home page  */}
+            {/* <DiJqueryLogo onClick={() => router.push("/")} /> */}
+            <a href="/">
+              {/* // logo link to home page  */}
               <Image
                 src={images.logo}
                 alt="BlockBusterMarketPlace"
                 width={150}
                 href="/"
-                //   height={100}
+                height={60}
               />
             </a>
           </div>
           <div className={Style.navbar_container_left_box_input}>
             <div className={Style.navbar_container_left_box_input_box}>
-              <input type="text" placeholder="Search Game Assets" />
+              <input type="text" placeholder="Search NFT" />
               <BsSearch onClick={() => {}} className={Style.search_icon} />
             </div>
           </div>
         </div>
-        {/* end of left */}
 
+        {/* //END OF LEFT SECTION */}
         <div className={Style.navbar_container_right}>
           <div className={Style.navbar_container_right_discover}>
             {/* DISCOVER MENU */}
             <p onClick={(e) => openMenu(e)}>Discover</p>
-            {discover && ( // if discover is true then show the discover menu
+            {discover && (
               <div className={Style.navbar_container_right_discover_box}>
                 <Discover />
               </div>
@@ -113,8 +128,8 @@ const NavBar = () => {
 
           {/* HELP CENTER MENU */}
           <div className={Style.navbar_container_right_help}>
-            <p onClick={(e) => openMenu(e)}>Help Center</p>
-            {help && ( // if help is true then show the help menu
+            <p onClick={(e) => openMenu(e)}>Help</p>
+            {help && (
               <div className={Style.navbar_container_right_help_box}>
                 <HelpCenter />
               </div>
@@ -128,20 +143,30 @@ const NavBar = () => {
               onClick={() => openNotification()}
             />
             {notification && <Notification />}
-            {/* /* // if notification is true then show the notification menu */}
           </div>
 
-          {/* CREATE BUTTON SECTION WHAT is THIS??? */}
+          {/* CREATE BUTTON SECTION */}
           <div className={Style.navbar_container_right_button}>
-            <Button btnName="Connect" handleClick={() => connectWallet()} />
-            {/* {currentAccount == "" ? ( // if currentAccount is empty then show the connect button
+            {currentAccount == "" ? (
               <Button btnName="Connect" handleClick={() => connectWallet()} />
             ) : (
               <Button
                 btnName="Create"
                 handleClick={() => router.push("/uploadNFT")}
               />
-            )} */}
+            )}
+          </div>
+
+          {/* CREATE BUTTON SECTION */}
+          <div className={Style.navbar_container_right_button}>
+            
+              <Button btnName="Connect" handleClick={() => connectWallet()} />
+ 
+              {/* <Button
+                btnName="Create"
+                handleClick={() => router.push("/uploadNFT")}
+              /> */}
+            
           </div>
 
           {/* USER PROFILE */}
@@ -157,9 +182,10 @@ const NavBar = () => {
                 className={Style.navbar_container_right_profile}
               />
 
-              {profile && <Profile />}
+              {profile && <Profile currentAccount={currentAccount} />}
             </div>
           </div>
+
           {/* MENU BUTTON */}
 
           <div className={Style.navbar_container_right_menuBtn}>
@@ -175,14 +201,14 @@ const NavBar = () => {
       {openSideMenu && (
         <div className={Style.sideBar}>
           <SideBar
-            setOpenSideMenu={setOpenSideMenu} // pass the function to the sidebar component
-            // currentAccount={currentAccount} //
-            // connectWallet={connectWallet}
+            setOpenSideMenu={setOpenSideMenu}
+            currentAccount={currentAccount}
+            connectWallet={connectWallet}
           />
         </div>
       )}
-      {/* {openError && <Error />}  */}
-      {/* // if openError is true then show the error component */}
+
+      {openError && <Error />}
     </div>
   );
 };

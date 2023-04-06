@@ -6,16 +6,17 @@
 
 .heroSection_box{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-columns: repeat(2, 1fr); */
+    grid-template-columns: 1fr 2fr;
     gap: 2rem;
 }
 
 .heroSection_box_left{
-    padding-right: 6rem;
+    padding-right: 0rem;
 }
 
 .heroSection_box_left h1{
-    font-size: 5rem;
+    font-size: 4rem;
     line-height: 1;
 }
 
@@ -43,4 +44,9 @@
         line-height: 1;
         font-size: 3rem;
     }
+}
+
+.heroSection_box_right{
+    /* //round the corners; */
+    border-radius: 2rem;
 }

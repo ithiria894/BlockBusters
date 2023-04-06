@@ -108,7 +108,7 @@ const BigNFTSilder = () => {
                 height={50}
               />
               <div className={Style.bigNFTSlider_box_left_creator_profile_info}>
-                <p>Owner</p>
+                <p>Creator</p>
                 <h4>
                   {sliderData[idNumber].name}{" "}
                   <span>
@@ -126,7 +126,7 @@ const BigNFTSilder = () => {
               <div
                 className={Style.bigNFTSlider_box_left_creator_collection_info}
               >
-                <p>Game</p>
+                <p>Collection</p>
                 <h4>{sliderData[idNumber].collection}</h4>
               </div>
             </div>
@@ -136,7 +136,7 @@ const BigNFTSilder = () => {
             <div className={Style.bigNFTSlider_box_left_bidding_box}>
               <small>Current Bid</small>
               <p>
-                {sliderData[idNumber].price} <span>$99999 HKD</span>
+                {sliderData[idNumber].price} <span>$221,21</span>
               </p>
             </div>
 
@@ -201,6 +201,9 @@ const BigNFTSilder = () => {
               src={sliderData[idNumber].nftImage}
               alt="NFT IMAGE"
               className={Style.bigNFTSlider_box_right_box_img}
+              width={700}
+              height={700}
+              //size fill the parent
               
             />
 

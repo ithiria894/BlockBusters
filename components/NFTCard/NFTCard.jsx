@@ -9,14 +9,17 @@ import Style from "./NFTCard.module.css";
 import images from "../../img";
 
 const NFTCard = ({ NFTData }) => {
-  const CardArray = [
-    images.pig,
-    images.pig,
-    images.pig,
-    images.pig,
-    images.pig,
-    images.pig,
-  ];
+  // const CardArray = [
+  //   images.nft_image_1,
+  //   images.nft_image_2,
+  //   images.nft_image_3,
+  //   images.nft_image_1,
+  //   images.nft_image_2,
+  //   images.nft_image_3,
+  //   images.nft_image_1,
+  //   images.nft_image_2,
+  //   images.nft_image_3,
+  // ];
 
   const [like, setLike] = useState(true);
 
@@ -31,15 +34,15 @@ const NFTCard = ({ NFTData }) => {
   // console.log(NFTData);
   return (
     <div className={Style.NFTCard}>
-      {CardArray.map((el, i) => (
+      {NFTData.map((el, i) => (
         <Link href={{ pathname: "/NFT-details", query: el }}>
           <div className={Style.NFTCard_box} key={i + 1}>
             <div className={Style.NFTCard_box_img}>
               <Image
-                src={images.pig}
-                alt="Game Assets images"
-                width={300}
-                // height={600}
+                src={el.image}
+                alt="NFT images"
+                width={600}
+                height={600}
                 className={Style.NFTCard_box_img_img}
               />
             </div>
@@ -63,8 +66,7 @@ const NFTCard = ({ NFTData }) => {
 
               <div className={Style.NFTCard_box_update_right}>
                 <div className={Style.NFTCard_box_update_right_info}>
-                  <small>Remaining</small>
-                  <small>time</small>
+                  <small>Remaining time</small>
                   <p>3h : 15m : 20s</p>
                 </div>
               </div>
@@ -84,7 +86,7 @@ const NFTCard = ({ NFTData }) => {
                       className={Style.NFTCard_box_update_details_price_box_bid}
                     >
                       <small>Current Bid</small>
-                      <p>{el.price}HKD</p>
+                      <p>{el.price}ETH</p>
                     </div>
                     <div
                       className={

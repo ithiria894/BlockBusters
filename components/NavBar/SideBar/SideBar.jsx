@@ -20,7 +20,7 @@ import images from "../../../img";
 import Button from "../../Button/Button";
 import { Router } from "next/router";
 
-const SideBar = () => {
+const SideBar = ({ setOpenSideMenu, currentAccount, connectWallet }) => {
   //------USESTATE
   const [openDiscover, setOpenDiscover] = useState(false);
   const [openHelp, setOpenHelp] = useState(false);
@@ -55,7 +55,7 @@ const SideBar = () => {
     },
     {
       name: "Connect Wallet",
-    //   link: "connectWallet",
+      link: "connectWallet",
     },
     {
       name: "Blog",
@@ -117,19 +117,12 @@ const SideBar = () => {
         {/* <Image src={images.logo} alt="logo" width={150} height={150} /> */}
         <p>
           <a href="/">
-            {/* <DiJqueryLogo className={Style.sideBar_box_logo} /> */}
-            <Image
-              src={images.okx}
-              alt="BlockBusterMarketPlace"
-              width={250}
-                className={Style.sideBar_box_logo}
-              //   height={100}
-            />
+            <DiJqueryLogo className={Style.sideBar_box_logo} />
           </a>
         </p>
         <p>
-          Discover the most popular Game Strategy & write
-          your own strategy and share them
+          Discover the most outstanding articles on all topices of NFT & write
+          your own stories and share them
         </p>
         <div className={Style.sideBar_social}>
           <a href="#">
@@ -193,14 +186,14 @@ const SideBar = () => {
       </div>
 
       <div className={Style.sideBar_button}>
-        {/* {currentAccount == "" ? ( */}
-          <Button btnName="connect"  />
-        {/* ) : ( */}
+        {currentAccount == "" ? (
+          <Button btnName="connect" handleClick={() => connectWallet()} />
+        ) : (
           <Button
             btnName="Create"
             handleClick={() => router.push("/uploadNFT")}
           />
-        {/* )} */}
+        )}
 
         <Button btnName="Connect Wallet" handleClick={() => {}} />
       </div>

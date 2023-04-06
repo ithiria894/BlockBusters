@@ -68,6 +68,14 @@ import image from "./image.png";
 import OKX1  from "./OKX1.png";
 import Alibaba1 from "./Alibaba1.png";
 import ust from "./ust.png";
+import hero3 from "./hero3.png";
+import game1 from "./game1.jpg";
+import game2 from "./game2.jpg";
+import game3 from "./game3.jpg";
+import game4 from "./game4.jpg";
+import game5 from "./game5.jpg";
+import game from "./game.png";
+
 
 
 
@@ -142,5 +150,11 @@ export default {
   OKX1,
   Alibaba1,
   ust,
-  
+  hero3,
+  game1,
+  game2,
+  game3,
+  game4,
+  game5,
+  game,
 };

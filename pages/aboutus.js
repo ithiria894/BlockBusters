@@ -30,20 +30,20 @@ const aboutus = () => {
     },
   ];
 
-  const factsArray = [
-    {
-      title: "10 million",
-      info: "Articles have been public around the world (as of Sept. 30, 2021)",
-    },
-    {
-      title: "100,000",
-      info: "Registered users account (as of Sept. 30, 2021)",
-    },
-    {
-      title: "220+",
-      info: "Countries and regions have our presence (as of Sept. 30, 2021",
-    },
-  ];
+  // const factsArray = [
+  //   {
+  //     title: "10 million",
+  //     info: "Articles have been public around the world (as of Sept. 30, 2021)",
+  //   },
+  //   {
+  //     title: "100,000",
+  //     info: "Registered users account (as of Sept. 30, 2021)",
+  //   },
+  //   {
+  //     title: "220+",
+  //     info: "Countries and regions have our presence (as of Sept. 30, 2021",
+  //   },
+  // ];
   return (
     <div className={Style.aboutus}>
       <div className={Style.aboutus_box}>
@@ -95,7 +95,7 @@ const aboutus = () => {
           </p>
         </div>
 
-        <div className={Style.aboutus_box_facts}>
+        {/* <div className={Style.aboutus_box_facts}>
           <div className={Style.aboutus_box_facts_box}>
             {factsArray.map((el, i) => (
               <div className={Style.aboutus_box_facts_box_info}>
@@ -104,7 +104,7 @@ const aboutus = () => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
       {/* <Brand /> */}
     </div>

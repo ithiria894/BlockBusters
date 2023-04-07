@@ -266,47 +266,54 @@ export const NFTMarketplaceProvider = ({ children }) => {
 
   //--FETCHING MY NFT OR LISTED NFTs
   const fetchMyNFTsOrListedNFTs = async (type) => {
-    try {
-      if (currentAccount) {
-        const contract = await connectingWithSmartContract();
+      return await getNFTs();
+    // try {
+    //   if (currentAccount) {
+    //     const contract = await connectingWithSmartContract();
 
-        const data =
-          type == "fetchItemsListed"
-            ? await contract.fetchItemsListed()
-            : await contract.fetchMyNFTs();
+    //     const data =
+    //       type == "fetchItemsListed"
+    //         ? await contract.fetchItemsListed()
+    //         : await contract.fetchMyNFTs();
 
-        const items = await Promise.all(
-          data.map(
-            async ({ tokenId, seller, owner, price: unformattedPrice }) => {
-              const tokenURI = await contract.tokenURI(tokenId);
-              const {
-                data: { image, name, description },
-              } = await axios.get(tokenURI);
-              const price = ethers.utils.formatUnits(
-                unformattedPrice.toString(),
-                "ether"
-              );
+    //     const items = await Promise.all(
+    //       data.map(
+    //         async ({ tokenId, seller, owner, price: unformattedPrice }) => {
+    //           const tokenURI = await contract.tokenURI(tokenId);
+    //           const {
+    //             data: { image, name, description },
+    //           } = await axios.get(tokenURI);
+    //           const price = ethers.utils.formatUnits(
+    //             unformattedPrice.toString(),
+    //             "ether"
+    //           );
 
-              return {
-                price,
-                tokenId: tokenId.toNumber(),
-                seller,
-                owner,
-                image,
-                name,
-                description,
-                tokenURI,
-              };
-            }
-          )
-        );
-        return items;
-      }
-    } catch (error) {
-      // setError("Error while fetching listed NFTs");
-      // setOpenError(true);
-    }
+    //           return {
+    //             price,
+    //             tokenId: tokenId.toNumber(),
+    //             seller,
+    //             owner,
+    //             image,
+    //             name,
+    //             description,
+    //             tokenURI,
+    //           };
+    //         }
+    //       )
+    //     );
+    //     return items;
+    //   }
+    // } catch (error) {
+    //   // setError("Error while fetching listed NFTs");
+    //   // setOpenError(true);
+    // }
   };
+
+  const getNFTs = async() => {
+    const response = await fetch('/api/nft')
+    const nfts = await response.json()
+    return nfts;
+  }
 
   useEffect(() => {
     fetchMyNFTsOrListedNFTs();

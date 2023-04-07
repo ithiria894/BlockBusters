@@ -25,7 +25,7 @@ const DropZone = ({
   const onDrop = useCallback(async (acceptedFile) => {
     const url = await uploadToIPFS(acceptedFile[0]);
     setFileUrl(url);
-    setImage(url);
+    setImage('https://' + url);
     console.log(url);
   });
 

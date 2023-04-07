@@ -16,8 +16,6 @@ import {
 import { NFTMarketplaceContext } from "../Context/NFTMarketplaceContext";
 
 const author = () => {
-
-
   const [collectiables, setCollectiables] = useState(true);
   const [created, setCreated] = useState(false);
   const [like, setLike] = useState(false);
@@ -62,20 +60,24 @@ const author = () => {
         setFollowing={setFollowing}
       /> */}
       <div>
-      {/* //call the function */}
-      {/* <p id="demo"></p>
+        {/* //call the function */}
+        {/* <p id="demo"></p>
         <button onClick={consoleLogNFTS}>Console Log NFTS</button> */}
       </div>
-
-      <AuthorNFTCardBox
-        collectiables={collectiables}
-        created={created}
-        like={like}
-        follower={follower}
-        following={following}
-        nfts={nfts}
-        myNFTS={myNFTs}
-      />
+      <div>
+        <a>{/* asdfasdf */}</a>
+      </div>
+      <div>
+        <AuthorNFTCardBox
+          collectiables={collectiables}
+          created={created}
+          like={like}
+          follower={follower}
+          following={following}
+          nfts={nfts}
+          myNFTS={myNFTs}
+        />
+      </div>
       {/* <Title
         heading="Popular Creators"
       />

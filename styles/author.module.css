@@ -1,5 +1,14 @@
 
+.author{
+    width: 80%;
+    margin: 0 auto;
 
+    display: grid;
+    /* grid-template-columns: repeat(4, 1fr); */
+    gap: 2rem;
+    /* margin-top: 2rem; */
+    margin-bottom: 6rem;
+}
 .author_box{
     width: 80%;
     margin: 0 auto;
@@ -8,6 +17,7 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
     margin-top: 6rem;
+    margin-bottom: 6rem;
 }
 
 @media screen and (max-width: 35em) {

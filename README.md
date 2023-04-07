@@ -1,4 +1,4 @@
-# Online Game Assets Custody and Trading Platform
+# Online Game Assets Custody and Trading Platform - BlockBusters
 
 ## Overview
 

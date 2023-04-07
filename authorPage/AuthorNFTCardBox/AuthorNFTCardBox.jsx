@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Style from "./AuthorNFTCardBox.module.css";
 import images from "../../img";
 import { NFTCardTwo } from "../../collectionPage/collectionIndex";
-import FollowerTabCard from "../../components/FollowerTab/FollowerTabCard/FollowerTabCard";
+// import FollowerTabCard from "../../components/FollowerTab/FollowerTabCard/FollowerTabCard";
 import { Loader } from "../../components/componentsindex";
 
 const AuthorNFTCardBox = ({

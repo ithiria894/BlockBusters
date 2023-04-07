@@ -57,7 +57,7 @@ const UloadNFT = ({ uploadToIPFS, createNFT }) => {
   return (
     <div className={Style.upload}>
       <div className={Style.uploadNFT_box_heading}>
-          <h1>Drop here if Non-NFT game assets </h1>
+          <h1>Drop here if Non-BlockChain game assets </h1>
         </div>
       <DropZone
         title="JPG, PNG, WEBM , MAX 100MB"
@@ -74,7 +74,7 @@ const UloadNFT = ({ uploadToIPFS, createNFT }) => {
         uploadToIPFS={uploadToIPFS}
       />
       <div className={Style.uploadNFT_box_heading}>
-          <h1>Drop here if is already NFT game assets </h1>
+          <h1>Drop here if is already BlockChain game assets </h1>
         </div>
       <DropZoneN
         title="JPG, PNG, WEBM , MAX 100MB"

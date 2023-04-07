@@ -50,12 +50,12 @@ const Profile = ({ currentAccount }) => {
         </div>
 
         <div className={Style.profile_menu_two}>
-          <div className={Style.profile_menu_one_item}>
+          {/* <div className={Style.profile_menu_one_item}>
             <MdHelpCenter />
             <p>
               <Link href={{ pathname: "/contactus" }}>Help</Link>
             </p>
-          </div>
+          </div> */}
           <div className={Style.profile_menu_one_item}>
             <TbDownload />
             <p>

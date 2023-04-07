@@ -9,17 +9,17 @@ import {
   Subscribe,
   Title,
   Category,
-  Filter,
+  // Filter,
   NFTCard,
-  Collection,
+  // Collection,
   AudioLive,
-  FollowerTab,
+  // FollowerTab,
   Slider,
   Brand,
   Video,
   Loader,
 } from "../components/componentsindex";
-import { getTopCreators } from "../TopCreators/TopCreators";
+// import { getTopCreators } from "../TopCreators/TopCreators";
 
 //IMPORTING CONTRCT DATA
 import { NFTMarketplaceContext } from "../Context/NFTMarketplaceContext";
@@ -49,7 +49,7 @@ const Home = () => {
 
   //CREATOR LIST
 
-  const creators = getTopCreators(nfts);
+  // const creators = getTopCreators(nfts);
   // console.log(creators);
 
   return (

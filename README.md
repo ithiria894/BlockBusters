@@ -1,5 +1,6 @@
-# Online Game Assets Custody and Trading Platform - BlockBusters
-
+# Online Game Assets Custody and Trading Platform - Block Buster
+Link To Vercel Demo Page:
+https://block-busters-final.vercel.app/
 ## Overview
 
 Our Online Game Assets Custody and Trading Platform is designed to revolutionize the digital asset trading industry by leveraging the power of Web3 technology. The platform aims to address the primary challenges in the current landscape: the lack of reliable marketplaces, high risk of fraud and scams, and difficulty in matching buyers and sellers.

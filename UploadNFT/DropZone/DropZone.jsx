@@ -16,7 +16,7 @@ const DropZone = ({
   royalties,
   fileSize,
   category,
-  properties,
+  game,
   uploadToIPFS,
   setImage,
 }) => {
@@ -25,7 +25,7 @@ const DropZone = ({
   const onDrop = useCallback(async (acceptedFile) => {
     const url = await uploadToIPFS(acceptedFile[0]);
     setFileUrl(url);
-    setImage(url);
+    setImage('https://' + url);
     console.log(url);
   });
 
@@ -95,7 +95,7 @@ const DropZone = ({
                 </p>
                 <p>
                   <span>Game</span>
-                  {properties || ""}
+                  {game || ""}
                 </p>
                 {/* <p>
                   <span>Price</span>

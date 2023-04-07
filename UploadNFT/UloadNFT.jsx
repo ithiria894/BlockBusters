@@ -13,7 +13,7 @@ import images from "../img";
 import { Button } from "../components/componentsindex.js";
 import { DropZone,DropZoneN } from "../UploadNFT/uploadNFTIndex.js";
 
-const UloadNFT = ({ uploadToIPFS, createNFT }) => {
+const UploadNFT = ({ uploadToIPFS, createNFT }) => {
   const [price, setPrice] = useState("");
   const [active, setActive] = useState(0);
   const [name, setName] = useState("");
@@ -22,7 +22,7 @@ const UloadNFT = ({ uploadToIPFS, createNFT }) => {
   const [royalties, setRoyalties] = useState("");
   const [fileSize, setFileSize] = useState("");
   const [category, setCategory] = useState(0);
-  const [properties, setProperties] = useState("");
+  const [game, setgame] = useState("");
   const [image, setImage] = useState(null);
 
   const router = useRouter();
@@ -69,7 +69,7 @@ const UloadNFT = ({ uploadToIPFS, createNFT }) => {
         royalties={royalties}
         fileSize={fileSize}
         category={category}
-        properties={properties}
+        game={game}
         setImage={setImage}
         uploadToIPFS={uploadToIPFS}
       />
@@ -86,7 +86,7 @@ const UloadNFT = ({ uploadToIPFS, createNFT }) => {
         royalties={royalties}
         fileSize={fileSize}
         category={category}
-        properties={properties}
+        game={game}
         setImage={setImage}
         uploadToIPFS={uploadToIPFS}
       />
@@ -196,8 +196,8 @@ const UloadNFT = ({ uploadToIPFS, createNFT }) => {
               </div>
               <input
                 type="text"
-                // placeholder="165MB"
-                onChange={(e) => setFileSize(e.target.value)}
+                placeholder="Category"
+                onChange={(e) => setCategory(e.target.value)}
               />
             </div>
           </div>
@@ -210,7 +210,7 @@ const UloadNFT = ({ uploadToIPFS, createNFT }) => {
               <input
                 type="text"
                 placeholder="Game"
-                onChange={(e) => setProperties(e.target.value)}
+                onChange={(e) => setgame(e.target.value)}
               />
             </div>
           </div>
@@ -233,19 +233,18 @@ const UloadNFT = ({ uploadToIPFS, createNFT }) => {
         <div className={Style.upload_box_btn}>
           <Button
             btnName="Upload"
-            handleClick={async () =>
+            handleClick={async () => {
               createNFT(
                 name,
+                website,
+                description,
+                category,
+                game,
                 price,
                 image,
-                description,
                 router
-                // website,
-                // royalties,
-                // fileSize,
-                // category,
-                // properties
               )
+            }
             }
             classStyle={Style.upload_box_btn_style}
           />
@@ -260,4 +259,4 @@ const UloadNFT = ({ uploadToIPFS, createNFT }) => {
   );
 };
 
-export default UloadNFT;
+export default UploadNFT;

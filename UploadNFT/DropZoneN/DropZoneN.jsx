@@ -16,7 +16,7 @@ const DropZoneN = ({
   royalties,
   fileSize,
   category,
-  properties,
+  game,
   uploadToIPFS,
   setImage,
 }) => {
@@ -91,7 +91,7 @@ const DropZoneN = ({
                 </p>
                 <p>
                   <span>Game</span>
-                  {properties || ""}
+                  {game || ""}
                 </p>
                 
               </div>

@@ -156,17 +156,9 @@ const NavBar = () => {
               />
             {/* )} */}
           </div>
-
-          {/* CREATE BUTTON SECTION */}
+          {/* CONNET BUTTON SECTION */}
           <div className={Style.navbar_container_right_button}>
-            
               <Button btnName="Connect" handleClick={() => connectWallet()} />
- 
-              {/* <Button
-                btnName="Create"
-                handleClick={() => router.push("/uploadNFT")}
-              /> */}
-            
           </div>
 
           {/* USER PROFILE */}

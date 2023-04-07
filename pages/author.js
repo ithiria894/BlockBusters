@@ -36,12 +36,6 @@ const author = () => {
     });
   }, []);
 
-  useEffect(() => {
-    fetchMyNFTsOrListedNFTs("fetchMyNFTs").then((items) => {
-      setMyNFTs(items);
-    });
-  }, []);
-
   //make a function to console log the nfts
   const consoleLogNFTS = () => {
     console.log(nfts);

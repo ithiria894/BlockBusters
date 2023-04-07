@@ -40,17 +40,8 @@ const NFTCardTwo = ({ NFTData }) => {
 //     },
 
 // }
-NFTData = [
-  {
-    image: images.cloth,
-  },
-  {
-    image: images.tate,
-  },
-
-];
+  console.log('NFTData ', NFTData)
 ////here above new added to test NFTdata
-  console.log(NFTData);
   return (
     <div className={Style.NFTCardTwo}>
       {NFTData.map((el, i) => (

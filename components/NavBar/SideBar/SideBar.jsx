@@ -30,36 +30,20 @@ const SideBar = ({ setOpenSideMenu, currentAccount, connectWallet }) => {
   //--------DISCOVER NAVIGATION MENU
   const discover = [
     {
-      name: "Collection",
-      link: "collection",
-    },
-    {
-      name: "Search",
-      link: "searchPage",
-    },
-    {
       name: "Author Profile",
       link: "author",
-    },
-    {
-      name: "NFT Details",
-      link: "NFT-details",
-    },
-    {
-      name: "Account Setting",
-      link: "account",
     },
     {
       name: "Upload NFT",
       link: "uploadNFT",
     },
     {
-      name: "Connect Wallet",
-      link: "connectWallet",
+      name: "API Doc",
+      link: "api-doc",
     },
     {
-      name: "Blog",
-      link: "blog",
+      name: "Connect Wallet",
+      link: "connectWallet",
     },
   ];
   //------HELP CNTEER

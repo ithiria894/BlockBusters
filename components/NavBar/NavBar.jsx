@@ -208,7 +208,7 @@ const NavBar = () => {
         </div>
       )}
 
-      {openError && <Error />}
+      {/* {openError && <Error />} */}
     </div>
   );
 };

@@ -57,7 +57,7 @@ const Slider = () => {
       <div className={Style.slider_box}>
         <h2>Explore Game Assets</h2>
         <div className={Style.slider_box_button}>
-          <p>Click to check </p>
+          {/* <p>Click to check </p> */}
           <div className={Style.slider_box_button_btn}>
             <div
               className={Style.slider_box_button_btn_icon}

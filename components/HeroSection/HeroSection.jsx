@@ -19,8 +19,8 @@ const HeroSection = () => {
         <div className={Style.heroSection_box_left}>
           <h1> Welcome to BlockBuster!</h1>
 
-          <div className={Style.heroSection_box_left_h2}>Online Game Assets Custody and Trading Platform
-          </div>
+          {/* <div className={Style.heroSection_box_left_h2}>Online Game Assets Custody and Trading Platform
+          </div> */}
           <p>Revolutionizing In Game Asset Trading with Web3 Technology</p>
 {/* 
           <Button

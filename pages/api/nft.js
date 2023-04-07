@@ -50,7 +50,7 @@ import clientPromise from '../../utils/mongoClient';
  *     required:
  *        - userName
  *     properties:
- *         itemName:
+ *         name:
  *            type: string
  *         website:
  *             type: string
@@ -62,7 +62,9 @@ import clientPromise from '../../utils/mongoClient';
  *             type: string
  *         price:
  *             type: string
- *         imageUrl:
+ *         image:
+ *              type: string 
+ *         url:
  *              type: string 
  *   NFTResponse:
  *      type: object
@@ -79,12 +81,16 @@ const handler = (req, res) => {
     if (req.method === 'POST') {
       postHandler(req, res)
     }
+    if (req.method === 'PUT') {
+      // update NFT URL only
+      putHandler(req, res)
+    }
 };
 
 const getHandler = async(req, res) => {
   try {
     const client = await clientPromise;
-    const db = client.db("nft");
+    const db = client.db("block_busters");
 
     const nfts = await db.collection("nft").find({}).toArray();
 
@@ -98,17 +104,18 @@ const getHandler = async(req, res) => {
 const postHandler = async(req, res) => {
   try {
     const client = await clientPromise;
-    const db = client.db("nft");
-    const { itemName, website, description, category, game, price, imageUrl } = req.body;
+    const db = client.db("block_busters");
+    const { name, website, description, category, game, price, image, url } = req.body;
 
     const nft = await db.collection("nft").insertOne({
-      itemName,
+      name,
       website,
       description,
       category,
       game,
       price,
-      imageUrl
+      image,
+      url,
     });
 
     res.status(200).json({

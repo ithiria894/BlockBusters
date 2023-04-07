@@ -103,8 +103,8 @@ export const NFTMarketplaceProvider = ({ children }) => {
   };
 
   // useEffect(() => {
-  //   // checkIfWalletConnected();
-  //   // connectingWithSmartContract();
+  //   checkIfWalletConnected();
+  //   connectingWithSmartContract();
   // }, []);
 
   //---CONNET WALLET FUNCTION
@@ -141,24 +141,37 @@ export const NFTMarketplaceProvider = ({ children }) => {
   };
 
   //---CREATENFT FUNCTION
-  const createNFT = async (name, price, image, description, router) => {
-    if (!name || !description || !price || !image)
+  const createNFT = async (name, website, description, category, game, price, image, router) => {
+    if (!name || !website || !description || !category || !game || !price || !image) {
       return setError("Data Is Missing"), setOpenError(true);
-
-    const data = JSON.stringify({ name, description, image });
-
+    }
+    
     try {
-      const added = await client.add(data);
-
+      let data = { name, website, description, category, game, price, image };
+      const added = await client.add(JSON.stringify(data));
       const url = `https://infura-ipfs.io/ipfs/${added.path}`;
-
-      await createSale(url, price);
-      router.push("/searchPage");
+      data.url = url;
+      await postNFT(data);
+      // await createSale(url, price);
+      router.push("/author");
     } catch (error) {
       setError("Error while creating NFT");
       setOpenError(true);
     }
   };
+
+  const postNFT = async(data) => {
+    const response = await fetch('/api/nft', {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    })
+    const postResult = await response.json();
+    console.log('postResult = ', postResult);
+    return postResult.nftId;
+  }
 
   //--- createSale FUNCTION
   const createSale = async (url, formInputPrice, isReselling, id) => {
@@ -247,7 +260,7 @@ export const NFTMarketplaceProvider = ({ children }) => {
 
   useEffect(() => {
     // if (currentAccount) {
-    fetchNFTs();
+    // fetchNFTs();
     // }
   }, []);
 

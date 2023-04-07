@@ -14,9 +14,32 @@ Our Online Game Assets Custody and Trading Platform is designed to revolutionize
 - **One-stop-shop:** A comprehensive trading platform for various digital assets, including skins, avatars, virtual weapons, cards, and MMORPG currencies.
 - **Scalability:** Utilizing tools like Infura, the platform is designed for future growth and expansion.
 
-## Rewards System
+## Unique Solutions
 
-Users can earn experience points (XP) for trading, reviewing, and participating in platform activities. They can unlock achievements, earn badges for reaching milestones, level up, and gain access to exclusive features, discounts, and trading opportunities.
+- **Gamified User Experience:**
+  - Earn experience points (XP) for trading, reviewing, and other platform activities
+  - Unlock achievements and badges for reaching milestones
+  - Level up and gain access to exclusive features, discounts, and trading opportunities
+
+- **Augmented Reality (AR) Technology:**
+  - Enhance the trading experience with 3D models of in-game assets for select 3D games
+  - Inspect items more easily before making a purchase
+
+- **Blockchain-based Lending:**
+  - Borrow assets and pay back with interest, creating a new revenue stream and increasing liquidity
+
+- **Machine Learning-based Pricing:**
+  - Predict prices of in-game assets and offer recommendations on when to buy or sell, adding sophistication to the trading experience
+
+- **Social Component:**
+  - Connect with other gamers, creating a community for sharing tips and advice on trading and gaming strategies
+
+- **Exclusive, Limited Edition In-game Assets:**
+  - Collaborate with gaming companies to create limited edition assets only obtainable through our platform, incentivizing platform usage
+
+- **Incentivized Asset Creation:**
+  - Reward users who create and upload original in-game assets, increasing the diversity and value of available trading assets
+
 
 ## Platform Architecture
 

@@ -75,8 +75,8 @@ import game3 from "./game3.jpg";
 import game4 from "./game4.jpg";
 import game5 from "./game5.jpg";
 import game from "./game.png";
-
-
+import nft4 from "./nft4.png";
+import cat from "./cat.png";
 
 
 export default {
@@ -157,4 +157,6 @@ export default {
   game4,
   game5,
   game,
+  nft4,
+  cat,
 };

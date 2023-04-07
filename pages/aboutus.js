@@ -11,22 +11,22 @@ const aboutus = () => {
     {
       name: "Nicole Leung",
       position: "Co-founder",
-      images: images.founder1,
+      images: images.cat,
     },
     {
       name: "Code9",
       position: "Co-founder",
-      images: images.founder2,
+      images: images.nft_image_2,
     },
     {
       name: "Jake",
       position: "Co-founder",
-      images: images.founder3,
+      images: images.nft_image_3,
     },
     {
       name: "Candy",
       position: "Co-Founder",
-      images: images.founder4,
+      images: images.nft_1,
     },
   ];
 
